@@ -37,23 +37,34 @@ class Dashboard extends Component{
             </option>
           })
           
+    const wordList2 = this.state.words.map(word=>
+            {
+        return <li key={word.id} data-key={word.id} value={word.original}>      
+                  <h4>{word.original}</h4>  
+                  correct answer count: {word.correct_count}
+                  incorrect answer count: {word.incorrect_count}
+              </li>
+            })          
     console.log(this.state)
           
          
     return(
-      <div className='Dashboard'>
+      <section className='Dashboard'>
         <div className='language_name'>
           <h2>Language:{this.state.language.name}</h2>
         </div>
         <div className='total_score'>
 
-          <h2>Total score is {this.state.language.total_score}</h2>
+          <h2>Total correct answers: {this.state.language.total_score}</h2>
         </div>
-
+        <div className='temp'>
+          <h3>Words to practice</h3>
+          {wordList2}
+        </div>
         <div className='word_list'>
-          <select onChange={this.updateCurrentWord} className='select_word'>                             
+          {/* <select onChange={this.updateCurrentWord} className='select_word'>                             
             {wordList}
-          </select>
+          </select> */}
         </div>
       <div className='current_word'>
        {this.state.currentWord}
@@ -66,10 +77,10 @@ class Dashboard extends Component{
       </div>
       <div className='start_practice'>
       <Link to='/learn'>
-          Start Practicing
+          Start practicing
         </Link>
       </div>
-      </div>
+      </section>
     )
   }
 }
