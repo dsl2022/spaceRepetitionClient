@@ -1,0 +1,10 @@
+.login__container{
+  display: flex; 
+  flex-direction: column;
+  margin:200px;
+  
+}
+
+.login_title{
+  color:black;
+}

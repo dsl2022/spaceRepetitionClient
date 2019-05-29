@@ -23,6 +23,11 @@ class Header extends Component {
             to='/login'>
             Logout
           </Link>
+          <Link
+            
+            to='/'>
+            Dashboard
+          </Link>
         </nav>
       </div>
     )
