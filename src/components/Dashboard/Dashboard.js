@@ -30,12 +30,12 @@ class Dashboard extends Component{
   render(){
     
    
-    const wordList = this.state.words.map(word=>
-          {
-      return <option key={word.id} data-key={word.id} value={word.original}>      
-                {word.original}      
-            </option>
-          })
+    // const wordList = this.state.words.map(word=>
+    //       {
+    //   return <option key={word.id} data-key={word.id} value={word.original}>      
+    //             {word.original}      
+    //         </option>
+    //       })
           
     const wordList2 = this.state.words.map(word=>
             {
