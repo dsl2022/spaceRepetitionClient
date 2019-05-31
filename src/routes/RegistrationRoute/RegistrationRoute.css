@@ -1,0 +1,15 @@
+.registration{
+  color:white;
+
+}
+
+.registration_form{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  color:white;
+}
+
+.registration h2{
+  color:white;
+}

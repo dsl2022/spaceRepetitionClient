@@ -1,0 +1,19 @@
+.LoginForm{
+  
+  margin-top: 20px;
+  margin-bottom: 80px;
+  
+}
+
+
+
+
+  
+  @media(max-width:600px){
+    .LoginInForm{
+      padding:0;
+      display:flex;
+      justify-content: center;
+    }
+
+  }

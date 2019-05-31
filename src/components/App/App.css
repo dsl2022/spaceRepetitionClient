@@ -1,4 +1,17 @@
 main{
   display:flex;
   justify-content: center;
+  background:#FA7921;
+}
+
+.App{
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background:#FA7921;
+}
+
+section{
+  margin:0 auto;
+  color:white;
 }

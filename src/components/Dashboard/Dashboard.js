@@ -1,6 +1,8 @@
 import React,{Component} from 'react'
 import LanguageApiService from '../../services/language-api-service'
 import {Link} from 'react-router-dom'
+import './Dashboard.css'
+import Particle from '../../components/Particle/Particle'
 
 class Dashboard extends Component{
   state={
@@ -51,7 +53,7 @@ class Dashboard extends Component{
     return(
       <section className='Dashboard'>
         <div className='language_name'>
-          <h2>Language:{this.state.language.name}</h2>
+          <h2>Language: {this.state.language.name}</h2>
         </div>
         <div className='total_score'>
 
@@ -80,6 +82,7 @@ class Dashboard extends Component{
           Start practicing
         </Link>
       </div>
+      <Particle/>
       </section>
     )
   }

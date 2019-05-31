@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import LanguageApiService from '../../services/language-api-service'
+import './LearningRoute.css'
 class LearningRoute extends Component {
   state={
     totalScore:null,
@@ -32,6 +33,7 @@ class LearningRoute extends Component {
     }
     LanguageApiService.submitGuessWord(guessWord)
     .then(data=>{      
+      let currentWord = this.state.nextWord
       this.setState({
       totalScore:data.totalScore,
       nextWord:data.nextWord,  
@@ -39,8 +41,9 @@ class LearningRoute extends Component {
       incorrectCount:data.wordIncorrectCount,
       isCorrect:data.isCorrect,
       answer:data.answer,
-      attempted:guess_word.value})
-      alert(this.state.isCorrect?'yes':'no')
+      attempted:guess_word.value,
+      currentword:currentWord})
+     
     })
   }
   render() {   
@@ -48,10 +51,10 @@ class LearningRoute extends Component {
     const isCorrectMessage=this.state.isCorrect?'You were correct! :D':'Good try, but not quite right :('
     return (
       <section>
-        <div>
+        <div className='current_score'>
           current score:{this.state.totalScore}
         </div>
-        <h3>Translate the word:</h3>
+        <h2>Translate the word:</h2>
         <span>{this.state.nextWord}</span>
         <p>Your total score is: {this.state.totalScore}</p>
         <form className='guess_word_form'
@@ -69,8 +72,9 @@ class LearningRoute extends Component {
           
           ></input>
           <button type='submit' className='guess_word_submit'>
-          Try another word!
+          Submit your answer
           </button>
+         
         </form>
         <div>
           You have answered this word correctly {this.state.correctCount} times.
@@ -78,7 +82,7 @@ class LearningRoute extends Component {
         <div>
          You have answered this word incorrectly {this.state.incorrectCount} times.
         </div>
-        <h2>{isCorrectMessage}</h2>
+        <h3>{isCorrectMessage}</h3>
         <div className='DisplayScore'>
         <p>Your total score is: {this.state.totalScore}</p>
         </div>
