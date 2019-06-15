@@ -1,4 +1,4 @@
-import TokenService from '../services/token-service'
+import TokenService from './token-service'
 import config from '../config'
 
 const LanguageApiService ={
