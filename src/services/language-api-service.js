@@ -3,7 +3,7 @@ import config from '../config'
 
 const LanguageApiService ={
   getLanguageWord(){
-    return fetch(`${config.API_ENDPOINT}/language`,{
+    return fetch(`${config.REACT_APP_API_BASE}/language`,{
      headers:{
       'authorization':`bearer ${TokenService.getAuthToken()}`
      }, 
@@ -15,7 +15,7 @@ const LanguageApiService ={
     )
   },
   getLearnWord(){
-    return fetch(`${config.API_ENDPOINT}/language/head`,{
+    return fetch(`${config.REACT_APP_API_BASE}/language/head`,{
       headers:{
        'authorization':`bearer ${TokenService.getAuthToken()}`
       }, 
@@ -27,7 +27,7 @@ const LanguageApiService ={
     )
   },
   submitGuessWord(word){
-    return fetch(`${config.API_ENDPOINT}/language/guess`,{
+    return fetch(`${config.REACT_APP_API_BASE}/language/guess`,{
       method:'POST',
       headers:{
         'content-type':'application/json',
