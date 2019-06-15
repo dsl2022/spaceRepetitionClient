@@ -12,7 +12,9 @@ class LoginRoute extends Component {
 
   handleLoginSuccess = () => {
     const { location, history } = this.props
+    console.log(location,history,'location history test')
     const destination = (location.state || {}).from || '/'
+    console.log(destination,'test destination')
     history.push(destination)
   }
 
