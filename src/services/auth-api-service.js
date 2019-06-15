@@ -3,7 +3,7 @@ import TokenService from './token-service'
 
 const AuthApiService = {
   postUser(user) {
-    
+    console.log(`${config.REACT_APP_API_BASE}`,'test')
     return fetch(`${config.REACT_APP_API_BASE}/user`, {
       method: 'POST',
       headers: {
@@ -18,6 +18,7 @@ const AuthApiService = {
       )
   },
   postLogin({ username, password }) {
+    console.log(`${config.REACT_APP_API_BASE}`,'test')
     return fetch(`${config.REACT_APP_API_BASE}/auth/token`, {
       method: 'POST',
       headers: {
