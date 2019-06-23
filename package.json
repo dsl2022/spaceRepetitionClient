@@ -11,7 +11,7 @@
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
     "react-particles-js": "^2.6.0",
-    "react-router-dom": "^4.3.1",
+    "react-router-dom": "^4.3.1",    
     "react-scripts": "2.1.5"
   },
   "scripts": {
@@ -19,6 +19,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "predeploy":"npm run build",
+    "deploy":"--name space-repetition-app ./build",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run"
   },
